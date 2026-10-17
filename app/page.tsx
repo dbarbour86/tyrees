@@ -31,94 +31,121 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col">
-      {/* 1. HERO SECTION */}
-      <section className="relative pt-28 pb-20 md:pt-36 md:pb-32 overflow-hidden bg-background">
-        {/* Glow & grid background */}
-        <div className="absolute inset-0 bg-[radial-gradient(#0FA3FB_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.07] pointer-events-none" />
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-primary/10 rounded-full blur-[120px] pointer-events-none" />
+      {/* 1. HERO SECTION (Solid near-black, balanced 2-column layout) */}
+      <section className="relative pt-28 pb-16 md:pt-36 md:pb-24 bg-[#09090b] border-b border-white/5">
+        <div className="container">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            {/* Left Column: Headline, copy, proof, and CTAs */}
+            <div className="lg:col-span-7 flex flex-col items-start text-left">
+              {/* Location & Trust Badge */}
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface border border-border text-xs font-semibold text-foreground/90 mb-5 shadow-sm">
+                <span className="flex h-2 w-2 rounded-full bg-primary animate-pulse" />
+                <MapPin className="w-3.5 h-3.5 text-primary" />
+                <span>Serving Clayton, NC &amp; Greater Triangle</span>
+              </div>
 
-        <div className="container relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            {/* Location & Trust Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface border border-border text-xs font-semibold text-foreground/90 mb-6 shadow-sm">
-              <span className="flex h-2 w-2 rounded-full bg-primary animate-pulse" />
-              <MapPin className="w-3.5 h-3.5 text-primary" />
-              <span>Serving Clayton, NC & Greater Triangle Area</span>
-            </div>
+              {/* Readable Headline in normal flow */}
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold uppercase tracking-tight text-white font-heading leading-[1.08]">
+                Your Car Deserves to <br className="hidden sm:inline" />
+                <span className="text-gradient">Look Amazing Again</span>
+              </h1>
 
-            {/* Mike's Preferred Baseline Headline */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase tracking-tight text-foreground font-heading leading-[1.05]">
-              Your Car Deserves to <br className="hidden sm:inline" />
-              <span className="text-gradient">Look Amazing Again</span>
-            </h1>
+              {/* Short Supporting Copy */}
+              <p className="mt-5 text-base sm:text-lg text-muted-foreground leading-relaxed max-w-xl">
+                Showroom-grade mobile &amp; shop detailing in Clayton and Johnston County. We invest 6 to 8 hours of focused precision on every full detail so your vehicle looks, feels, and smells brand new.
+              </p>
 
-            <p className="mt-6 text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto font-sans leading-relaxed">
-              Showroom-grade mobile & shop detailing. We invest 6 to 8 hours of focused precision on every full detail so your vehicle looks, feels, and smells brand new.
-            </p>
-
-            {/* CTAs */}
-            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button
-                type="button"
-                onClick={() => openModal()}
-                className="w-full sm:w-auto px-8 py-4 rounded-xl bg-primary hover:bg-primary-hover text-black font-extrabold text-sm uppercase tracking-wider transition-all shadow-[0_0_25px_rgba(15,163,251,0.35)] hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
-              >
-                <Calendar className="w-4 h-4" />
-                <span>Request Appointment</span>
-              </button>
-
-              <a
-                href="tel:9193203010"
-                className="w-full sm:w-auto px-7 py-4 rounded-xl bg-surface hover:bg-surface-hover text-foreground border border-border hover:border-border-strong font-bold text-sm uppercase tracking-wider transition-all flex items-center justify-center gap-2"
-              >
-                <Phone className="w-4 h-4 text-primary" />
-                <span>Call (919) 320-3010</span>
-              </a>
-            </div>
-
-            {/* Verified Google Social Proof */}
-            <div className="mt-8 pt-6 border-t border-border/60 flex flex-wrap items-center justify-center gap-6 text-xs text-muted-foreground">
-              <div className="flex items-center gap-1.5">
-                <div className="flex text-amber-400">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-amber-400" />
-                  ))}
+              {/* Verified Review Proof */}
+              <div className="mt-6 pt-5 border-t border-white/10 flex flex-wrap items-center gap-4 text-xs text-muted-foreground w-full">
+                <div className="flex items-center gap-1.5">
+                  <div className="flex text-amber-400">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-amber-400" />
+                    ))}
+                  </div>
+                  <span className="font-bold text-foreground">5.0 Star Rated</span>
                 </div>
-                <span className="font-bold text-foreground">5.0 Star Rated</span>
+                <span className="text-white/20">•</span>
+                <div className="flex items-center gap-1.5">
+                  <ShieldCheck className="w-4 h-4 text-primary" />
+                  <span>22 Verified Google Reviews</span>
+                </div>
+                <span className="text-white/20">•</span>
+                <div className="flex items-center gap-1.5">
+                  <Clock className="w-4 h-4 text-primary" />
+                  <span>6–8 Hour Standard</span>
+                </div>
               </div>
-              <span className="hidden sm:inline text-border">•</span>
-              <div className="flex items-center gap-1.5">
-                <ShieldCheck className="w-4 h-4 text-primary" />
-                <span>22 Verified Google Reviews</span>
-              </div>
-              <span className="hidden sm:inline text-border">•</span>
-              <div className="flex items-center gap-1.5">
-                <Clock className="w-4 h-4 text-primary" />
-                <span>6–8 Hour Deep Detail Standard</span>
+
+              {/* CTAs */}
+              <div className="mt-8 flex flex-wrap items-center gap-3 sm:gap-4 w-full">
+                <button
+                  type="button"
+                  onClick={() => openModal()}
+                  className="px-7 py-3.5 rounded-xl bg-primary hover:bg-primary-hover text-black font-extrabold text-xs sm:text-sm uppercase tracking-wider transition-all shadow-[0_0_20px_rgba(15,163,251,0.35)] hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
+                >
+                  <Calendar className="w-4 h-4" />
+                  <span>Request Appointment</span>
+                </button>
+
+                <a
+                  href="tel:9193203010"
+                  className="px-5 py-3.5 rounded-xl bg-surface hover:bg-surface-hover text-foreground border border-border hover:border-border-strong font-bold text-xs sm:text-sm uppercase tracking-wider transition-all flex items-center justify-center gap-2"
+                >
+                  <Phone className="w-4 h-4 text-primary" />
+                  <span>(919) 320-3010</span>
+                </a>
+
+                <a
+                  href="sms:9193203010"
+                  className="px-4 py-3.5 rounded-xl bg-surface hover:bg-surface-hover text-foreground border border-border hover:border-border-strong font-bold text-xs sm:text-sm uppercase tracking-wider transition-all flex items-center justify-center gap-2"
+                  title="Text Mike"
+                >
+                  <MessageSquare className="w-4 h-4 text-primary" />
+                  <span>Text Mike</span>
+                </a>
               </div>
             </div>
 
-            {/* Hero Image Showcase */}
-            <div className="mt-12 relative rounded-2xl overflow-hidden border border-border shadow-2xl bg-surface">
-              <div className="aspect-[16/9] sm:aspect-[21/9] relative w-full">
+            {/* Right Column: Strong vehicle photo with controlled dimensions */}
+            <div className="lg:col-span-5 w-full">
+              <div className="relative rounded-2xl overflow-hidden border border-primary/30 shadow-[0_0_35px_rgba(15,163,251,0.18)] bg-surface aspect-[4/3] w-full max-w-[520px] mx-auto lg:ml-auto">
                 <Image
                   src="/images/hero-car.jpg"
-                  alt="Tyree's Auto Detailing Finished Supercar with Gloss Paint"
+                  alt="Tyree's Auto Detailing Finished Supercar in Clayton, NC"
                   fill
                   priority
                   className="object-cover object-center"
-                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  sizes="(max-width: 1024px) 100vw, 520px"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80" />
-              </div>
-              <div className="absolute bottom-4 left-4 right-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs text-white/90 bg-background/80 backdrop-blur-md p-3 rounded-lg border border-white/10">
-                <span className="font-medium">
-                  Real client vehicle detailed in Clayton, NC
-                </span>
-                <span className="text-primary font-bold">100% Satisfaction Standard</span>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[11px] text-white/90 bg-black/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10">
+                  <span className="font-semibold">Clayton, NC • 6–8 Hour Deep Detail</span>
+                  <span className="text-primary font-bold">Showroom Finish</span>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* 2. DEDICATED BEFORE & AFTER COMPARISON SECTION */}
+      <section className="py-16 md:py-20 bg-[#0e0f14] border-b border-border">
+        <div className="container">
+          <div className="max-w-2xl mx-auto text-center mb-8">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+              <Sparkles className="w-3.5 h-3.5" />
+              Real Transformations
+            </div>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase tracking-tight text-white font-heading">
+              See the Difference <span className="text-gradient">Yourself</span>
+            </h2>
+            <p className="mt-2 text-xs sm:text-sm text-muted-foreground">
+              Slide left and right to inspect authentic paint decontamination, swirl removal, and gloss revival on real client vehicles.
+            </p>
+          </div>
+
+          <BeforeAfterSlider />
         </div>
       </section>
 
@@ -259,10 +286,7 @@ export default function HomePage() {
       {/* 4. PACKAGES & PRICING */}
       <PackageComparison showComparisonTable={true} />
 
-      {/* 5. BEFORE & AFTER PROOF SLIDER */}
-      <BeforeAfterSlider />
-
-      {/* 6. PROOF GALLERY (Boats, RVs, Trucks, Cars) */}
+      {/* 5. PROOF GALLERY (Boats, RVs, Trucks, Cars) */}
       <GallerySection limit={6} />
 
       {/* 7. MORE THAN JUST A CLEAN CAR - Key Benefits */}
