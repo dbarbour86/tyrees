@@ -26,6 +26,7 @@ export default function GallerySection({
   const categories: { id: GalleryCategory; label: string }[] = [
     { id: 'all', label: 'All Work' },
     { id: 'featured', label: 'Featured' },
+    { id: 'black-vehicles', label: 'Black Vehicles' },
     { id: 'cars', label: 'Cars & Muscle' },
     { id: 'trucks', label: 'Trucks & SUVs' },
     { id: 'marine', label: 'Boats & Marine' },
@@ -308,7 +309,7 @@ export default function GallerySection({
             >
               <div style={{ position: 'relative', width: '100%', aspectRatio: '16/10', maxHeight: '68vh' }}>
                 <Image
-                  src={activeItem.imageSrc}
+                  src={activeItem.originalSrc || activeItem.imageSrc}
                   alt={activeItem.altText}
                   fill
                   sizes="920px"

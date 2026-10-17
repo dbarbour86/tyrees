@@ -5,7 +5,7 @@
  * Built with typed interfaces so it can easily be swapped with a Headless CMS or storage API (e.g. Supabase, S3, Cloudinary) later.
  */
 
-export type GalleryCategory = 'all' | 'featured' | 'cars' | 'trucks' | 'marine' | 'rv' | 'specialty';
+export type GalleryCategory = 'all' | 'featured' | 'black-vehicles' | 'cars' | 'trucks' | 'marine' | 'rv' | 'specialty';
 
 export interface GalleryItem {
   id: string;
@@ -13,6 +13,7 @@ export interface GalleryItem {
   category: GalleryCategory;
   categoryLabel: string;
   imageSrc: string;
+  originalSrc?: string;
   altText: string;
   caption: string;
   vehicleDetails?: string;
@@ -156,6 +157,146 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     caption: 'Heavy road-film removal, aluminum acid-free brightening, and wheels shined.',
     vehicleDetails: 'Commercial Horse Trailer · Johnston County, NC',
     order: 10,
+    featured: false,
+    aspectRatio: '4/3'
+  },
+  {
+    id: 'bv-f150-chrome',
+    title: 'Black Ford F-150 Crew Cab',
+    category: 'black-vehicles',
+    categoryLabel: 'Black Vehicles',
+    imageSrc: '/images/black-vehicles/3PcUCVRm.webp',
+    originalSrc: '/images/black-vehicles/3PcUCVRm.jpg',
+    altText: 'Black Ford F-150 crew cab pickup truck with chrome front grille and polished wheels parked on grass.',
+    caption: 'High-gloss exterior wash and paint finish on black Ford F-150 with polished chrome wheels and trim.',
+    vehicleDetails: 'Ford F-150 · Clayton, NC',
+    order: 11,
+    featured: false,
+    aspectRatio: '4/3'
+  },
+  {
+    id: 'bv-expedition-platinum',
+    title: 'Black Ford Expedition Platinum',
+    category: 'black-vehicles',
+    categoryLabel: 'Black Vehicles',
+    imageSrc: '/images/black-vehicles/4JB-85VR.webp',
+    originalSrc: '/images/black-vehicles/4JB-85VR.jpg',
+    altText: 'Black Ford Expedition Platinum full-size SUV with multi-spoke wheels parked on grass.',
+    caption: 'Detailed black Ford Expedition Platinum SUV showing reflective paint clarity and dressed tires.',
+    vehicleDetails: 'Ford Expedition Platinum · Johnston County, NC',
+    order: 12,
+    featured: false,
+    aspectRatio: '4/3'
+  },
+  {
+    id: 'bv-tahoe-z71',
+    title: 'Black Chevrolet Tahoe Z71',
+    category: 'black-vehicles',
+    categoryLabel: 'Black Vehicles',
+    imageSrc: '/images/black-vehicles/Et9S-XQ6.webp',
+    originalSrc: '/images/black-vehicles/Et9S-XQ6.jpg',
+    altText: 'Glossy black Chevrolet Tahoe Z71 SUV with black grille and dressed tires parked on gravel.',
+    caption: 'Exterior detail on a black Chevrolet Tahoe Z71 highlighting glossy black panels and cleaned wheels.',
+    vehicleDetails: 'Chevy Tahoe Z71 · Clayton, NC',
+    order: 13,
+    featured: false,
+    aspectRatio: '4/3'
+  },
+  {
+    id: 'bv-challenger-hoodscoops',
+    title: 'Black Dodge Challenger Coupe',
+    category: 'black-vehicles',
+    categoryLabel: 'Black Vehicles',
+    imageSrc: '/images/black-vehicles/LvQkRkX9.webp',
+    originalSrc: '/images/black-vehicles/LvQkRkX9.jpg',
+    altText: 'Black Dodge Challenger muscle car with red hood accents and black wheels parked on grass.',
+    caption: 'Exterior clean and paint gloss enhancement on a black Dodge Challenger with black sport wheels.',
+    vehicleDetails: 'Dodge Challenger · Clayton, NC',
+    order: 14,
+    featured: false,
+    aspectRatio: '4/3'
+  },
+  {
+    id: 'bv-accord-sedan',
+    title: 'Black Honda Accord Sedan',
+    category: 'black-vehicles',
+    categoryLabel: 'Black Vehicles',
+    imageSrc: '/images/black-vehicles/Q4l8hjCN.webp',
+    originalSrc: '/images/black-vehicles/Q4l8hjCN.jpg',
+    altText: 'Black Honda Accord sedan with factory machined wheels and glossy exterior finish parked on lawn.',
+    caption: 'Exterior hand wash and gloss finish on a black Honda Accord sedan.',
+    vehicleDetails: 'Honda Accord · Johnston County, NC',
+    order: 15,
+    featured: false,
+    aspectRatio: '4/3'
+  },
+  {
+    id: 'bv-telluride-blackout',
+    title: 'Black Kia Telluride SUV',
+    category: 'black-vehicles',
+    categoryLabel: 'Black Vehicles',
+    imageSrc: '/images/black-vehicles/dmr9ztyF.webp',
+    originalSrc: '/images/black-vehicles/dmr9ztyF.jpg',
+    altText: 'Black Kia Telluride SUV with blacked-out grille and matching black wheels parked on grass.',
+    caption: 'Complete exterior detail and wheel clean on a black Kia Telluride SUV.',
+    vehicleDetails: 'Kia Telluride · Clayton, NC',
+    order: 16,
+    featured: false,
+    aspectRatio: '4/3'
+  },
+  {
+    id: 'bv-camaro-ss',
+    title: 'Black Chevrolet Camaro SS',
+    category: 'black-vehicles',
+    categoryLabel: 'Black Vehicles',
+    imageSrc: '/images/black-vehicles/jHi403C2.webp',
+    originalSrc: '/images/black-vehicles/jHi403C2.jpg',
+    altText: 'Gloss black Chevrolet Camaro SS coupe with black five-spoke wheels and front splitter parked on grass.',
+    caption: 'Exterior polish and paint enhancement on black Chevrolet Camaro SS coupe.',
+    vehicleDetails: 'Chevy Camaro SS · Clayton, NC',
+    order: 17,
+    featured: false,
+    aspectRatio: '4/3'
+  },
+  {
+    id: 'bv-bmw-x5',
+    title: 'Black BMW X5 Luxury SUV',
+    category: 'black-vehicles',
+    categoryLabel: 'Black Vehicles',
+    imageSrc: '/images/black-vehicles/oJoc1_Kt.webp',
+    originalSrc: '/images/black-vehicles/oJoc1_Kt.jpg',
+    altText: 'Black BMW X5 SUV with gloss black kidney grille and dark alloy wheels parked on grass.',
+    caption: 'Exterior wash and paint gloss enhancement on a black BMW X5 luxury SUV.',
+    vehicleDetails: 'BMW X5 · Raleigh / Clayton, NC',
+    order: 18,
+    featured: false,
+    aspectRatio: '4/3'
+  },
+  {
+    id: 'bv-f150-supercrew-4x4',
+    title: 'Black Ford F-150 SuperCrew 4x4',
+    category: 'black-vehicles',
+    categoryLabel: 'Black Vehicles',
+    imageSrc: '/images/black-vehicles/ydr2KL-U.webp',
+    originalSrc: '/images/black-vehicles/ydr2KL-U.jpg',
+    altText: 'Black Ford F-150 SuperCrew 4x4 pickup truck with chrome grille and polished wheels in the sun.',
+    caption: 'Full exterior truck detail on black Ford F-150 4x4 with chrome trim and wheel polishing.',
+    vehicleDetails: 'Ford F-150 4x4 · Clayton, NC',
+    order: 19,
+    featured: false,
+    aspectRatio: '4/3'
+  },
+  {
+    id: 'bv-silverado-2500hd',
+    title: 'Black Chevrolet Silverado 2500 HD',
+    category: 'black-vehicles',
+    categoryLabel: 'Black Vehicles',
+    imageSrc: '/images/black-vehicles/z3MPzDxi.webp',
+    originalSrc: '/images/black-vehicles/z3MPzDxi.jpg',
+    altText: 'Black Chevrolet Silverado 2500 HD crew cab pickup truck with Z71 package detailed on grass.',
+    caption: 'Heavy-duty exterior detail on black Chevrolet Silverado 2500 HD with clean tires, steps, and trim.',
+    vehicleDetails: 'Chevy Silverado 2500 HD · Clayton, NC',
+    order: 20,
     featured: false,
     aspectRatio: '4/3'
   }
