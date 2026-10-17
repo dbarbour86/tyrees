@@ -1,215 +1,156 @@
-# BOOK MOAR — CLIENT INTAKE
-
-> Fill in what you know. Leave unknown fields blank.
->
-> **AGENT RULE:** Do not make the user manually research information that can reasonably be discovered from the client's website, Google Business Profile, social profiles, or other public sources. Research those items yourself and place verified findings in the appropriate context files. Never invent missing business facts.
+# BOOK MOAR — CLIENT INTAKE: TYREE'S AUTO DETAILING
 
 ---
 
 ## 0. CONFIRMED CLIENT IDENTITY — REQUIRED BEFORE RESEARCH
 
-> **HARD STOP:** The agent may discover a likely candidate, but the fields below are not authoritative until the user explicitly confirms the business.
+Business name: Tyree's Auto Detailing
 
-Business name:
+Website/domain: tyreesautodetailing.com
 
-Website/domain:
+City / State: Clayton, NC
 
-City / State:
+Business type: Professional Mobile & Shop Auto Detailing (Cars, Trucks, RVs, Boats)
 
-Business type:
+Confirmed by user: YES
 
-Confirmed by user: NO
-
-Confirmation notes:
-
-> Change `Confirmed by user` to `YES` only after explicit human confirmation. Until then, do not begin substantive research, SEO auditing, strategy, design, or coding.
+Confirmation notes: Confirmed by user in interactive confirmation modal on 2026-10-17.
 
 ---
 
-## 1. REQUIRED — START HERE
+## 1. REQUIRED — BUSINESS PROFILE
 
-Business name:
+Business name: Tyree's Auto Detailing
 
-Current website/domain:
+Current website/domain: https://tyreesautodetailing.com/
 
-Primary contact name:
+Primary contact name: Mike Tyree (Michael Tyree)
 
-Phone:
+Phone: (919) 320-3010
 
-Email:
+Email: tyreesautodetailing@yahoo.com
 
-Primary city:
+Physical Address: 2809 Merchantile Ct, Clayton, NC 27520
 
-Known service area:
+Primary city: Clayton, NC
 
-Industry / business type:
+Known service area: Clayton, NC and surrounding areas (Smithfield, Garner, Knightdale, Wendell, Zebulon, Raleigh, Apex, Holly Springs, Fuquay-Varina — Johnston and Wake Counties).
+
+Industry / business type: High-end mobile and pickup/drop-off auto detailing, paint correction, ceramic/machine polish, boats, RVs, and commercial/specialty trailers.
 
 ---
 
 ## 2. WHAT DOES THE BUSINESS SELL?
 
 Primary service:
+Professional vehicle detailing packages:
+- Gold Package ($350 starting)
+- Platinum Package ($450 starting)
+- Titanium Package ($550 starting — Most Popular)
+- Diamond Package ($650 starting)
 
 Other important services:
+- Bi-Weekly Maintenance ($60 — Strictly for existing customers only)
+- Monthly Maintenance ($95 — Strictly for existing customers only)
+- Paint Correction (Swirl and scratch removal, oxidation recovery — custom quote)
+- Specialty Vehicle Detailing (Boats, RVs, campers, lifted trucks, horse trailers, off-road vehicles — custom quote)
+- Gift Certificates (Any amount)
 
-Highest-value or priority service, if known:
+Highest-value or priority service:
+Titanium and Diamond packages; marine and RV full restorations.
+
+Operational qualification:
+Full detail takes 6–8 hours of meticulous work. Work is completed on-site when space, water/power, and weather/shade cooperate; pickup/drop-off is used when on-site conditions would compromise quality.
 
 Anything they specifically do NOT offer:
+- Fast $15 automated tunnel car washes
+- Instant dry-cleaning without prep
+- Maintenance plans for brand-new/unserviced vehicles (maintenance is strictly for existing customers who have had an initial full detail)
 
 ---
 
 ## 3. WHAT SHOULD WEBSITE VISITORS DO?
 
 Primary conversion goal:
+- [x] Request an Appointment (online request form with package preselection, vehicle info, location, and condition notes)
 
-- [ ] Call
-- [ ] Request a quote
-- [ ] Book an appointment
-- [ ] Text
-- [ ] Submit a contact form
-- [ ] Visit the business
-- [ ] Other:
+Secondary conversion goals:
+- [x] Text (919) 320-3010 (Direct SMS for fastest quotes and photo reviews)
+- [x] Call (919) 320-3010
 
-Secondary conversion goal:
-
-Existing booking URL, if any:
+Existing booking URL:
+None (Mike confirms all dates, pricing adjustments based on size/condition, and logistical fit before scheduling).
 
 ---
 
 ## 4. WHY SHOULD SOMEONE CHOOSE THEM?
 
 What makes this business different?
+- Over 20 years of hands-on detailing experience.
+- Honest, practical approach: realistic 6–8 hour timeframes; upfront pricing with clear condition factors.
+- Mobile convenience on-site, plus pickup and drop-off flexibility when conditions (heat, sun, rain, space) require shop-grade environment.
+- Owner-operated workmanship: Mike directly oversees and executes high-standard work.
+- Versatile capability: proven track record on daily drivers, exotic cars, lifted trucks, boats, and large RVs.
 
-Important guarantees, certifications, experience, specialties, or trust signals:
+Tagline:
+"Built on experience! Known for quality!"
 
-Special offers / financing / promotions:
-
-> Only include claims that can be verified. Add verified facts to `context/SOURCE-OF-TRUTH.md`.
+Important trust signals:
+- 5.0 Star rating across 200+ verified customer reviews on Google.
+- Authentic unedited portfolio photos of real customer vehicles across Clayton and Triangle NC.
 
 ---
 
 ## 5. BRAND & ASSETS
 
 Logo available?
-
-- [ ] Yes
-- [ ] No
+- [x] Yes (Preserved circular Tyree's logo webp in `/images/tyrees-logo.webp`)
 
 Existing brand colors:
+- Electric cyan-blue (`#0FA3FB` / `oklch(0.68 0.19 235)`)
+- Jet dark theme background (`#09090b` / `#121212` / `#18181b`)
+- White / high-contrast foreground text (`#f8fafc`)
+- Muted silver-zinc accents (`#a1a1aa`, `#27272a`)
 
 Photos available?
+- [x] Yes (Complete authentic library downloaded into `public/images/proof/`, `public/images/before-car.jpg`, `public/images/after-car.jpg`, `public/black-car.png`, `public/images/hero-car.jpg`)
 
-- [ ] Yes
-- [ ] No
-- [ ] Need to source appropriate imagery
+Brand personality:
+Confident, masculine, meticulous, high-craft, honest, reliable, friendly local expert.
 
-Brand personality / desired feel:
+Things client likes from current website:
+- Black and vibrant blue color direction
+- Logo and branding
+- Real customer photos (Challenger, boat, RV, black truck)
+- Before/After visual comparison
+- Clear package tier cards
+- Clean mobile reachability (text and call buttons)
 
-Anything the client wants to keep from the current website:
-
-Anything they dislike about the current website:
-
----
-
-## 6. DESIGN DIRECTION — OPTIONAL
-
-Websites or screenshots the client/user likes:
-
-What specifically do they like about them?
-
-Anything they absolutely do NOT want visually?
-
-> References are inspiration, not templates to copy. The final site should be distinct to this business.
+Improvements wanted:
+- Noticeably more polished layout, tighter spacing, better visual hierarchy
+- Better package comparison table/flow
+- Streamlined appointment request flow that preselects packages
+- Clean integration readiness for Votel without fake mockups
+- Structured gallery architecture ready for future owner uploads
 
 ---
 
-## 7. COMPETITORS — OPTIONAL
-
-Known competitors:
-
-1.
-2.
-3.
-
-> If blank, research the meaningful local/search competitors before planning the site.
-
----
-
-## 8. REVIEWS & SOCIAL PROOF
+## 6. REVIEWS & SOCIAL PROOF
 
 Google Business Profile:
+Google Reviews link: https://share.google/SkrkDyliki5ooqSDi (Rated 5.0, 232 reviews recorded)
 
 Facebook:
-
-Instagram:
-
-Other review/profile URLs:
-
-Testimonials supplied directly by client:
-
-> Research public reviews where appropriate, but never fabricate or alter a review.
+https://www.facebook.com/tyreesautodetailing
 
 ---
 
-## 9. CRM / LEAD HANDLING
+## 7. CRM / LEAD HANDLING & VOTEL PREPARATION
 
 Use Votel?
+- [x] Yes (Integration boundary prepared; currently operating in preview/fallback mode until Votel API/webhook is provisioned)
 
-- [ ] Yes
-- [ ] No
-- [ ] Not decided
-
-Votel account/sub-account:
-
-Current CRM or lead system:
-
-Where should form leads go?
-
-How are appointments currently booked?
-
----
-
-## 10. EXISTING TECHNICAL INFORMATION
-
-Current hosting, if known:
-
-Domain registrar, if known:
-
-Analytics:
-
-Google Search Console:
-
-Other integrations:
-
-> Do not change DNS during initial discovery. Before any future DNS change, export/record existing DNS and preserve MX, SPF, DKIM, and DMARC unless email migration is explicitly included.
-
----
-
-## 11. NOTES
-
-Anything else we know about the client:
-
----
-
-# AGENT: WHAT TO DO AFTER INTAKE
-
-After reading this file:
-
-**First check Section 0. If `Confirmed by user` is not `YES`, follow the Client Identity Gate and STOP before substantive work.**
-
-1. Read `AGENTS.md` and `docs/PROJECT-SETUP.md`.
-2. Read all existing files under `context/`.
-3. Separate **verified facts**, **user-provided preferences**, and **unknowns**.
-4. Research reasonable unknowns from public sources instead of asking the user to do unnecessary research.
-5. Update research/context documents with verified findings.
-6. Ask only for important information that cannot reasonably be discovered.
-7. Analyze customers, competitors, offer, local search intent, and conversion path.
-8. Propose the sitemap, homepage strategy, primary CTA, SEO approach, and a client-specific visual direction.
-9. Do not begin blindly from a fixed visual template.
-10. After the plan is accepted, build using Book Moar standards and the relevant skills in `.agents/skills/`.
-
-## Core Principle
-
-**The Book Moar process is standardized. The websites are not.**
-
-Every client follows the same research, strategy, build, QA, and launch discipline while receiving a design and content strategy appropriate to that specific business.
+Form lead destinations:
+- Primary: Prepared Votel lead webhook/endpoint (`/api/appointment-request`)
+- Server-side environment variables: `VOTEL_WEBHOOK_URL`, `VOTEL_API_KEY`
+- Fallback/Preview behavior: When endpoints are unconfigured, show explicit preview notification and direct users to text or call (919) 320-3010 directly.

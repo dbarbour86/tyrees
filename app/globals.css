@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,900&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --font-display: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Brand Palette */
+  --brand-blue: #0FA3FB;
+  --brand-blue-hover: #38b6ff;
+  --brand-blue-glow: rgba(15, 163, 251, 0.35);
+  --brand-blue-subtle: rgba(15, 163, 251, 0.08);
+  --brand-blue-border: rgba(15, 163, 251, 0.4);
+
+  /* Dark Theme Surfaces */
+  --background: #09090b;
+  --background-alt: #0d0e12;
+  --panel-bg: #121318;
+  --card-bg: #16171f;
+  --card-hover: #1c1d27;
+  --card-border: rgba(255, 255, 255, 0.09);
+  --card-border-hover: rgba(15, 163, 251, 0.6);
+
+  /* Typography & Foreground */
+  --foreground: #f8fafc;
+  --muted-foreground: #a1a1aa;
+  --faint-foreground: #71717a;
+
+  /* Accents & States */
+  --border: rgba(255, 255, 255, 0.1);
+  --border-subtle: rgba(255, 255, 255, 0.05);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  /* Atmosphere & Grid */
+  --dot-grid: radial-gradient(circle, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  --dot-size: 24px 24px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--background);
+  color: var(--foreground);
+  line-height: 1.6;
+}
+
+/* Background Atmosphere */
+.atmo-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -10;
+  overflow: hidden;
+}
+
+.atmo-hero-car {
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/hero-car.jpg');
+  background-size: cover;
+  background-position: center 30%;
+  opacity: 0.18;
+  filter: saturate(0.85) brightness(0.85) contrast(1.05);
+}
+
+.atmo-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(125% 95% at 50% 36%, rgba(9, 9, 11, 0.7) 0%, rgba(9, 9, 11, 0.9) 55%, rgba(9, 9, 11, 0.98) 100%);
+}
+
+.atmo-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(9, 9, 11, 0.8) 0%, transparent 22%, transparent 75%, rgba(9, 9, 11, 0.98) 100%);
+}
+
+.atmo-dots {
+  position: absolute;
+  inset: 0;
+  background-image: var(--dot-grid);
+  background-size: var(--dot-size);
+  opacity: 0.8;
+}
+
+/* Typography Helpers */
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+.text-gradient {
+  color: var(--brand-blue);
+  text-shadow: 0 0 24px var(--brand-blue-glow);
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--brand-blue);
+  color: #000000;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--radius-full);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 20px var(--brand-blue-glow);
+  min-height: 48px;
+}
+
+.btn-primary:hover {
+  background-color: var(--brand-blue-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px var(--brand-blue-glow);
+}
+
+.btn-primary:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  min-height: 48px;
+}
+
+.btn-outline:hover {
+  border-color: var(--brand-blue);
+  color: var(--brand-blue);
+  background-color: var(--brand-blue-subtle);
+  transform: translateY(-2px);
+}
+
+.btn-outline:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.btn-outline-blue {
+  border: 1.5px solid var(--brand-blue);
+  color: var(--brand-blue);
+}
+
+/* Badges */
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--brand-blue-border);
+  color: var(--brand-blue);
+  background-color: var(--brand-blue-subtle);
+}
+
+/* Card Styles */
+.card-base {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-base:hover {
+  border-color: var(--card-border-hover);
+  background-color: var(--card-hover);
+  transform: translateY(-4px);
+}
+
+/* Focus styles for keyboard accessibility */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--brand-blue);
+  outline-offset: 3px;
+}
+
+/* Interactive Slider */
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  aspect-ratio: 16 / 9;
+  user-select: none;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.slider-handle {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--brand-blue);
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 24px var(--brand-blue-glow);
+  z-index: 20;
+  cursor: ew-resize;
+  pointer-events: none;
+}
+
+/* Lightbox Modal */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes riseUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-rise {
+  animation: riseUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Table Comparison */
+.comparison-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 1.5rem;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 1rem 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.comparison-table th {
+  background-color: rgba(255, 255, 255, 0.03);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--foreground);
+}
+
+.comparison-table tr:hover td {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Form Controls */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+  text-align: left;
+}
+
+.form-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.form-input, .form-select, .form-textarea {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 0.8rem 1rem;
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease;
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-color: var(--brand-blue);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.form-error {
+  font-size: 0.78rem;
+  color: #f87171;
+  margin-top: 0.25rem;
+}

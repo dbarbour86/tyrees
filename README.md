@@ -1,3 +1,33 @@
+# TYREE'S AUTO DETAILING — CLIENT BUILD PROMPT
+
+```text
+These screenshots show the current design Mike likes. Use them as the visual baseline. Preserve its identity while improving layout, spacing, photography, package comparison, and the appointment request flow.
+Build an improved website for Tyree’s Auto Detailing using our Book Moar starter.
+
+STARTER REPOSITORY:
+https://github.com/dbarbour86/BOOKMOAR-WEBSITE-STARTER
+
+CURRENT WEBSITE:
+https://tyreesautodetailing.com/
+
+GOAL
+Mike likes his current website. Create a noticeably more polished version that preserves its identity, business details, services, photography, and useful content. Improve what we already have rather than replacing it with a generic detailing template.
+
+This client will also be our first test of connecting a custom website to Votel. Prepare clean integration points now; live integration comes separately.
+
+1. MANDATORY WORKSPACE PREFLIGHT
+2. AUDIT BEFORE BUILDING
+3. VISUAL DIRECTION
+4. CONTENT AND PACKAGES
+5. CUSTOMER FLOW
+6. GALLERY NOW; OWNER UPLOADS LATER
+7. PREPARE FOR VOTEL
+8. SEO, ACCESSIBILITY, AND PERFORMANCE
+9. BUILD AND VERIFY
+```
+
+---
+
 # 🚨 BOOK MOAR WEBSITE STARTER — MASTER TEMPLATE
 
 > **DO NOT USE THIS REPOSITORY AS A CLIENT WEBSITE.**
