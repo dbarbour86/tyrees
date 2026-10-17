@@ -97,7 +97,7 @@ export default function HomePage() {
               className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-primary hover:bg-primary-hover text-black font-extrabold text-sm uppercase tracking-wider transition-all shadow-[0_0_25px_rgba(15,163,251,0.45)] hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
             >
               <Calendar className="w-4 h-4" />
-              <span>Request Appointment</span>
+              <span>Book Appointment</span>
             </button>
 
             <a
@@ -255,7 +255,7 @@ export default function HomePage() {
                   onClick={() => openModal()}
                   className="px-6 py-3.5 rounded-lg bg-primary hover:bg-primary-hover text-black font-extrabold text-xs uppercase tracking-wider transition-all inline-flex items-center gap-2"
                 >
-                  <span>Request Your Appointment</span>
+                  <span>Book Appointment</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </button>
               </div>
@@ -469,7 +469,7 @@ export default function HomePage() {
                 className="w-full sm:w-auto px-8 py-4 rounded-xl bg-primary hover:bg-primary-hover text-black font-extrabold text-sm uppercase tracking-wider transition-all shadow-[0_0_25px_rgba(15,163,251,0.35)] flex items-center justify-center gap-2"
               >
                 <Calendar className="w-4 h-4" />
-                <span>Request Appointment</span>
+                <span>Book Appointment</span>
               </button>
 
               <a

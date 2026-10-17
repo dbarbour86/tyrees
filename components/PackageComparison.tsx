@@ -113,7 +113,7 @@ export default function PackageComparison({ showComparisonTable = true }: { show
                           : "bg-surface-elevated hover:bg-surface-hover text-foreground border border-border hover:border-primary/50"
                       }`}
                     >
-                      <span>Select {pkg.name}</span>
+                      <span>Book {pkg.name}</span>
                       <ArrowRight className="w-3.5 h-3.5" />
                     </button>
                   </div>
@@ -231,7 +231,7 @@ export default function PackageComparison({ showComparisonTable = true }: { show
                     onClick={() => openModal(plan.id)}
                     className="w-full py-2.5 px-4 rounded-lg bg-surface-elevated hover:bg-surface-hover text-foreground border border-border hover:border-primary/50 text-xs font-bold uppercase tracking-wider transition-all"
                   >
-                    Inquire Maintenance
+                    Book {plan.name}
                   </button>
                 </div>
               ))}

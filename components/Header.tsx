@@ -119,14 +119,14 @@ export default function Header() {
               <Phone className="w-4 h-4 text-primary" />
             </a>
 
-            {/* Request Appointment Button */}
+            {/* Book Appointment Button */}
             <button
               type="button"
               onClick={() => openModal()}
               className="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-primary hover:bg-primary-hover text-black text-xs md:text-sm font-bold uppercase tracking-wider transition-all shadow-[0_0_15px_rgba(15,163,251,0.35)]"
             >
               <CalendarCheck className="w-4 h-4" />
-              <span>Request Appointment</span>
+              <span>Book Appointment</span>
             </button>
 
             {/* Mobile Menu Hamburger */}
@@ -201,7 +201,7 @@ export default function Header() {
               className="w-full py-3.5 px-4 rounded-xl bg-primary hover:bg-primary-hover text-black font-extrabold text-sm uppercase tracking-wider transition-all shadow-[0_0_20px_rgba(15,163,251,0.35)] flex items-center justify-center gap-2"
             >
               <CalendarCheck className="w-4 h-4" />
-              <span>Request Appointment</span>
+              <span>Book Appointment</span>
             </button>
 
             <div className="grid grid-cols-2 gap-3">

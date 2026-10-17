@@ -64,7 +64,7 @@ export default async function CityServiceAreaPage({ params }: PageProps) {
               className="px-6 py-3.5 rounded-xl bg-surface hover:bg-surface-hover text-foreground border border-border font-bold text-xs uppercase tracking-wider transition-all flex items-center gap-2"
             >
               <Calendar className="w-4 h-4 text-primary" />
-              <span>Request Appointment</span>
+              <span>Book Appointment</span>
             </Link>
           </div>
         </div>

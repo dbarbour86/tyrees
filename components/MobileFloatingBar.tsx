@@ -37,7 +37,7 @@ export default function MobileFloatingBar() {
           className="flex-[2] py-2.5 px-3 rounded-lg bg-primary hover:bg-primary-hover text-black flex items-center justify-center gap-1.5 text-xs font-extrabold uppercase tracking-wider shadow-[0_0_15px_rgba(15,163,251,0.4)] transition-all active:scale-95"
         >
           <Calendar className="w-3.5 h-3.5" />
-          <span>Request Quote</span>
+          <span>Book Appointment</span>
         </button>
       </div>
     </div>

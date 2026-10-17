@@ -113,6 +113,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${barlow.variable} ${barlowCondensed.variable} dark`}>
       <head>
+        <link rel="preconnect" href="https://app.votel.ai" />
+        <link rel="dns-prefetch" href="https://app.votel.ai" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

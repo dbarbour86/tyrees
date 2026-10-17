@@ -145,12 +145,15 @@ https://www.facebook.com/tyreesautodetailing
 
 ---
 
-## 7. CRM / LEAD HANDLING & VOTEL PREPARATION
+## 7. CRM / LEAD HANDLING & VOTEL CONFIGURATION
 
 Use Votel?
-- [x] Yes (Integration boundary prepared; currently operating in preview/fallback mode until Votel API/webhook is provisioned)
+- [x] Yes (Live integration active via Votel form-embed SDK)
 
-Form lead destinations:
-- Primary: Prepared Votel lead webhook/endpoint (`/api/appointment-request`)
-- Server-side environment variables: `VOTEL_WEBHOOK_URL`, `VOTEL_API_KEY`
-- Fallback/Preview behavior: When endpoints are unconfigured, show explicit preview notification and direct users to text or call (919) 320-3010 directly.
+Votel Form Details:
+- Script: `https://app.votel.ai/form-embed/v1.js`
+- Form ID: `oHma` (`data-form-id="oHma"`, `data-transparent="1"`)
+- Form Name: Tyree's Auto Detailing - Appointment Request
+- Form Tenant: `mike-tyree-105e8138`
+- Trigger: All "Book Appointment" buttons open the modal with live Votel embed form.
+- Direct Fallback: Call or text (919) 320-3010
