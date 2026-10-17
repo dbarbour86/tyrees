@@ -31,100 +31,81 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col">
-      {/* 1. HERO SECTION (Solid near-black, balanced 2-column layout) */}
-      <section className="relative pt-28 pb-16 md:pt-36 md:pb-24 bg-[#09090b] border-b border-white/5">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-            {/* Left Column: Headline, copy, proof, and CTAs */}
-            <div className="lg:col-span-7 flex flex-col items-start text-left">
-              {/* Location & Trust Badge */}
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface border border-border text-xs font-semibold text-foreground/90 mb-5 shadow-sm">
-                <span className="flex h-2 w-2 rounded-full bg-primary animate-pulse" />
-                <MapPin className="w-3.5 h-3.5 text-primary" />
-                <span>Serving Clayton, NC &amp; Greater Triangle</span>
-              </div>
+      {/* 1. HERO SECTION (Matching Mike's preferred baseline with background car) */}
+      <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden bg-[#09090b] border-b border-white/5">
+        {/* Car in background with darkened overlay for high contrast readability */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/hero-car.jpg"
+            alt="Tyree's Auto Detailing Finished Car Background"
+            fill
+            priority
+            className="object-cover object-center brightness-[0.38] contrast-[1.12]"
+            sizes="100vw"
+          />
+          {/* Subtle radial vignette and gradient fade */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#09090b]/80 via-[#09090b]/40 to-[#09090b]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(9,9,11,0.65)_100%)]" />
+        </div>
 
-              {/* Readable Headline in normal flow */}
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold uppercase tracking-tight text-white font-heading leading-[1.08]">
-                Your Car Deserves to <br className="hidden sm:inline" />
-                <span className="text-gradient">Look Amazing Again</span>
-              </h1>
+        <div className="container relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
+          {/* Top Badge */}
+          <div className="inline-flex items-center px-4 py-1.5 rounded-full border border-primary text-primary text-xs font-extrabold uppercase tracking-widest bg-primary/10 mb-6 backdrop-blur-sm shadow-[0_0_15px_rgba(15,163,251,0.25)]">
+            BUILT ON EXPERIENCE! KNOWN FOR QUALITY!
+          </div>
 
-              {/* Short Supporting Copy */}
-              <p className="mt-5 text-base sm:text-lg text-muted-foreground leading-relaxed max-w-xl">
-                Showroom-grade mobile &amp; shop detailing in Clayton and Johnston County. We invest 6 to 8 hours of focused precision on every full detail so your vehicle looks, feels, and smells brand new.
-              </p>
+          {/* Centered Circular Logo */}
+          <div className="relative w-20 h-20 md:w-24 md:h-24 mb-6 drop-shadow-[0_0_25px_rgba(15,163,251,0.35)]">
+            <Image
+              src="/images/tyrees-logo.webp"
+              alt="Tyree's Auto Detailing"
+              fill
+              priority
+              className="object-contain"
+              sizes="96px"
+            />
+          </div>
 
-              {/* Verified Review Proof */}
-              <div className="mt-6 pt-5 border-t border-white/10 flex flex-wrap items-center gap-4 text-xs text-muted-foreground w-full">
-                <div className="flex items-center gap-1.5">
-                  <div className="flex text-amber-400">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-amber-400" />
-                    ))}
-                  </div>
-                  <span className="font-bold text-foreground">5.0 Star Rated</span>
-                </div>
-                <span className="text-white/20">•</span>
-                <div className="flex items-center gap-1.5">
-                  <ShieldCheck className="w-4 h-4 text-primary" />
-                  <span>22 Verified Google Reviews</span>
-                </div>
-                <span className="text-white/20">•</span>
-                <div className="flex items-center gap-1.5">
-                  <Clock className="w-4 h-4 text-primary" />
-                  <span>6–8 Hour Standard</span>
-                </div>
-              </div>
+          {/* Headline */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white font-heading leading-[1.08] mb-5">
+            Your Car Deserves to <br />
+            <span className="text-primary">Look Amazing</span> Again
+          </h1>
 
-              {/* CTAs */}
-              <div className="mt-8 flex flex-wrap items-center gap-3 sm:gap-4 w-full">
-                <button
-                  type="button"
-                  onClick={() => openModal()}
-                  className="px-7 py-3.5 rounded-xl bg-primary hover:bg-primary-hover text-black font-extrabold text-xs sm:text-sm uppercase tracking-wider transition-all shadow-[0_0_20px_rgba(15,163,251,0.35)] hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
-                >
-                  <Calendar className="w-4 h-4" />
-                  <span>Request Appointment</span>
-                </button>
+          {/* Supporting Copy */}
+          <p className="text-sm sm:text-base md:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed mb-6 font-sans">
+            Over 20 years of detailing experience in Clayton, NC and surrounding areas. Full-package details typically run 6–8 hours, on-site when conditions allow, with pickup/drop-off available when it&apos;s the better fit.
+          </p>
 
-                <a
-                  href="tel:9193203010"
-                  className="px-5 py-3.5 rounded-xl bg-surface hover:bg-surface-hover text-foreground border border-border hover:border-border-strong font-bold text-xs sm:text-sm uppercase tracking-wider transition-all flex items-center justify-center gap-2"
-                >
-                  <Phone className="w-4 h-4 text-primary" />
-                  <span>(919) 320-3010</span>
-                </a>
-
-                <a
-                  href="sms:9193203010"
-                  className="px-4 py-3.5 rounded-xl bg-surface hover:bg-surface-hover text-foreground border border-border hover:border-border-strong font-bold text-xs sm:text-sm uppercase tracking-wider transition-all flex items-center justify-center gap-2"
-                  title="Text Mike"
-                >
-                  <MessageSquare className="w-4 h-4 text-primary" />
-                  <span>Text Mike</span>
-                </a>
-              </div>
+          {/* Social Proof Line */}
+          <div className="flex flex-wrap items-center justify-center gap-2 text-xs sm:text-sm text-white/90 mb-8 font-medium">
+            <div className="flex text-primary">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+              ))}
             </div>
+            <span>
+              <strong className="text-white">Trusted by 200+ local vehicle owners</strong>, backed by real 5-star reviews
+            </span>
+          </div>
 
-            {/* Right Column: Strong vehicle photo with controlled dimensions */}
-            <div className="lg:col-span-5 w-full">
-              <div className="relative rounded-2xl overflow-hidden border border-primary/30 shadow-[0_0_35px_rgba(15,163,251,0.18)] bg-surface aspect-[4/3] w-full max-w-[520px] mx-auto lg:ml-auto">
-                <Image
-                  src="/images/hero-car.jpg"
-                  alt="Tyree's Auto Detailing Finished Supercar in Clayton, NC"
-                  fill
-                  priority
-                  className="object-cover object-center"
-                  sizes="(max-width: 1024px) 100vw, 520px"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
-                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[11px] text-white/90 bg-black/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10">
-                  <span className="font-semibold">Clayton, NC • 6–8 Hour Deep Detail</span>
-                  <span className="text-primary font-bold">Showroom Finish</span>
-                </div>
-              </div>
-            </div>
+          {/* Two Centered Action Buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+            <button
+              type="button"
+              onClick={() => openModal()}
+              className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-primary hover:bg-primary-hover text-black font-extrabold text-sm uppercase tracking-wider transition-all shadow-[0_0_25px_rgba(15,163,251,0.45)] hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
+            >
+              <Calendar className="w-4 h-4" />
+              <span>Request Appointment</span>
+            </button>
+
+            <a
+              href="#packages"
+              className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-black/40 hover:bg-white/10 text-white border border-white/20 hover:border-white/40 font-bold text-sm tracking-wider transition-all flex items-center justify-center"
+            >
+              <span>See Our Services</span>
+            </a>
           </div>
         </div>
       </section>

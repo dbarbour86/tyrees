@@ -30,12 +30,12 @@ export default function Header() {
             : "bg-[#09090b]/75 backdrop-blur-sm border-b border-transparent"
         }`}
       >
-        <div className="container h-full flex items-center justify-between gap-4">
+        <div className="container h-full flex items-center justify-between gap-4 relative">
           {/* Logo Brand */}
           <Link
             href="/"
             aria-label="Tyree's Auto Detailing Home"
-            className="flex items-center gap-3 text-foreground no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg"
+            className="flex items-center gap-3 text-foreground no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg z-10"
           >
             <div className="relative w-10 h-10 shrink-0">
               <Image
@@ -57,8 +57,8 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-6" aria-label="Main Navigation">
+          {/* Desktop Navigation Centered */}
+          <nav className="hidden lg:flex items-center gap-7 absolute left-1/2 -translate-x-1/2" aria-label="Main Navigation">
             <Link
               href="/services"
               className="text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors"
