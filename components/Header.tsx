@@ -30,75 +30,77 @@ export default function Header() {
             : "bg-[#09090b]/75 backdrop-blur-sm border-b border-transparent"
         }`}
       >
-        <div className="container h-full flex items-center justify-between gap-4 relative">
-          {/* Logo Brand */}
-          <Link
-            href="/"
-            aria-label="Tyree's Auto Detailing Home"
-            className="flex items-center gap-3 text-foreground no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg z-10"
-          >
-            <div className="relative w-10 h-10 shrink-0">
-              <Image
-                src="/images/tyrees-logo.webp"
-                alt="Tyree's Auto Detailing Logo"
-                fill
-                sizes="40px"
-                className="object-contain"
-                priority
-              />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-heading font-black text-lg md:text-xl tracking-tight leading-none text-white">
-                TYREE&apos;S
-              </span>
-              <span className="text-[10px] md:text-xs font-bold tracking-widest text-primary uppercase">
-                Auto Detailing
-              </span>
-            </div>
-          </Link>
+        <div className="container h-full flex items-center justify-between gap-4">
+          {/* Left Cluster: Logo Brand + Desktop Navigation */}
+          <div className="flex items-center gap-7 xl:gap-9">
+            <Link
+              href="/"
+              aria-label="Tyree's Auto Detailing Home"
+              className="flex items-center gap-3 text-foreground no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg shrink-0"
+            >
+              <div className="relative w-9 h-9 md:w-10 md:h-10 shrink-0">
+                <Image
+                  src="/images/tyrees-logo.webp"
+                  alt="Tyree's Auto Detailing Logo"
+                  fill
+                  sizes="40px"
+                  className="object-contain"
+                  priority
+                />
+              </div>
+              <div className="flex flex-col">
+                <span className="font-heading font-black text-lg md:text-xl tracking-tight leading-none text-white">
+                  TYREE&apos;S
+                </span>
+                <span className="text-[10px] md:text-xs font-bold tracking-widest text-primary uppercase">
+                  Auto Detailing
+                </span>
+              </div>
+            </Link>
 
-          {/* Desktop Navigation Centered */}
-          <nav className="hidden lg:flex items-center gap-7 absolute left-1/2 -translate-x-1/2" aria-label="Main Navigation">
-            <Link
-              href="/services"
-              className="text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Services &amp; Pricing
-            </Link>
-            <Link
-              href="/gallery"
-              className="text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Gallery
-            </Link>
-            <Link
-              href="/service-area"
-              className="text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Service Area
-            </Link>
-            <Link
-              href="/about"
-              className="text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors"
-            >
-              About
-            </Link>
-            <Link
-              href="/reviews"
-              className="text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Reviews
-            </Link>
-            <Link
-              href="/contact"
-              className="text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Contact
-            </Link>
-          </nav>
+            {/* Desktop Navigation - Tightened & Moved Left */}
+            <nav className="hidden lg:flex items-center gap-5 xl:gap-6" aria-label="Main Navigation">
+              <Link
+                href="/services"
+                className="text-xs xl:text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap"
+              >
+                Services &amp; Pricing
+              </Link>
+              <Link
+                href="/gallery"
+                className="text-xs xl:text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap"
+              >
+                Gallery
+              </Link>
+              <Link
+                href="/service-area"
+                className="text-xs xl:text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap"
+              >
+                Service Area
+              </Link>
+              <Link
+                href="/about"
+                className="text-xs xl:text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap"
+              >
+                About
+              </Link>
+              <Link
+                href="/reviews"
+                className="text-xs xl:text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap"
+              >
+                Reviews
+              </Link>
+              <Link
+                href="/contact"
+                className="text-xs xl:text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap"
+              >
+                Contact
+              </Link>
+            </nav>
+          </div>
 
           {/* Right Action Buttons */}
-          <div className="flex items-center gap-2 md:gap-3">
+          <div className="flex items-center gap-2 md:gap-2.5 shrink-0">
             {/* Quick SMS Link */}
             <a
               href="sms:9193203010"
@@ -123,7 +125,7 @@ export default function Header() {
             <button
               type="button"
               onClick={() => openModal()}
-              className="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-primary hover:bg-primary-hover text-black text-xs md:text-sm font-bold uppercase tracking-wider transition-all shadow-[0_0_15px_rgba(15,163,251,0.35)]"
+              className="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-primary hover:bg-primary-hover text-black text-xs md:text-sm font-bold uppercase tracking-wider transition-all shadow-[0_0_15px_rgba(15,163,251,0.35)] shrink-0"
             >
               <CalendarCheck className="w-4 h-4" />
               <span>Book Appointment</span>
