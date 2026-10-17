@@ -51,7 +51,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="py-12 md:py-20">
+    <div className="pt-28 pb-16 md:pt-36 md:pb-24">
       <div className="container max-w-5xl">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-xs font-semibold uppercase tracking-wider text-primary mb-4">

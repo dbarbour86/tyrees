@@ -32,7 +32,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col">
       {/* 1. HERO SECTION */}
-      <section className="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden bg-background">
+      <section className="relative pt-28 pb-20 md:pt-36 md:pb-32 overflow-hidden bg-background">
         {/* Glow & grid background */}
         <div className="absolute inset-0 bg-[radial-gradient(#0FA3FB_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.07] pointer-events-none" />
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-primary/10 rounded-full blur-[120px] pointer-events-none" />

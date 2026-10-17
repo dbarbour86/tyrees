@@ -5,8 +5,10 @@ import { AppointmentProvider } from "@/context/AppointmentContext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AppointmentModal from "@/components/AppointmentModal";
+import MobileFloatingBar from "@/components/MobileFloatingBar";
 
 const inter = Inter({
+
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
@@ -122,8 +124,10 @@ export default function RootLayout({
           <main className="flex-1 pb-16 md:pb-0">{children}</main>
           <Footer />
           <AppointmentModal />
+          <MobileFloatingBar />
         </AppointmentProvider>
       </body>
     </html>
   );
 }
+
