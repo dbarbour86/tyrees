@@ -12,7 +12,7 @@ export interface ServiceCity {
 export const SERVICE_CITIES: ServiceCity[] = [
   {
     slug: 'clayton-nc',
-    name: 'Clayton, NC',
+    name: 'Clayton',
     county: 'Johnston County',
     isPrimary: true,
     zipCodes: ['27520', '27527', '27528'],
@@ -22,7 +22,7 @@ export const SERVICE_CITIES: ServiceCity[] = [
   },
   {
     slug: 'smithfield-nc',
-    name: 'Smithfield, NC',
+    name: 'Smithfield',
     county: 'Johnston County',
     zipCodes: ['27577'],
     distanceFromBase: '15 mins south',
@@ -31,7 +31,7 @@ export const SERVICE_CITIES: ServiceCity[] = [
   },
   {
     slug: 'garner-nc',
-    name: 'Garner, NC',
+    name: 'Garner',
     county: 'Wake County',
     zipCodes: ['27529'],
     distanceFromBase: '12 mins northwest',
@@ -40,7 +40,7 @@ export const SERVICE_CITIES: ServiceCity[] = [
   },
   {
     slug: 'knightdale-nc',
-    name: 'Knightdale, NC',
+    name: 'Knightdale',
     county: 'Wake County',
     zipCodes: ['27545'],
     distanceFromBase: '18 mins north',
@@ -49,7 +49,7 @@ export const SERVICE_CITIES: ServiceCity[] = [
   },
   {
     slug: 'wendell-nc',
-    name: 'Wendell, NC',
+    name: 'Wendell',
     county: 'Wake County',
     zipCodes: ['27591'],
     distanceFromBase: '20 mins northeast',
@@ -58,7 +58,7 @@ export const SERVICE_CITIES: ServiceCity[] = [
   },
   {
     slug: 'zebulon-nc',
-    name: 'Zebulon, NC',
+    name: 'Zebulon',
     county: 'Wake County',
     zipCodes: ['27597'],
     distanceFromBase: '25 mins northeast',
@@ -67,7 +67,7 @@ export const SERVICE_CITIES: ServiceCity[] = [
   },
   {
     slug: 'raleigh-nc',
-    name: 'Raleigh, NC',
+    name: 'Raleigh',
     county: 'Wake County',
     zipCodes: ['27601', '27603', '27610', '27604', '27616'],
     distanceFromBase: '20–30 mins west',
@@ -76,7 +76,7 @@ export const SERVICE_CITIES: ServiceCity[] = [
   },
   {
     slug: 'apex-nc',
-    name: 'Apex, NC',
+    name: 'Apex',
     county: 'Wake County',
     zipCodes: ['27502', '27523', '27539'],
     distanceFromBase: '30 mins west',
@@ -85,7 +85,7 @@ export const SERVICE_CITIES: ServiceCity[] = [
   },
   {
     slug: 'holly-springs-nc',
-    name: 'Holly Springs, NC',
+    name: 'Holly Springs',
     county: 'Wake County',
     zipCodes: ['27540'],
     distanceFromBase: '30 mins southwest',
@@ -94,7 +94,7 @@ export const SERVICE_CITIES: ServiceCity[] = [
   },
   {
     slug: 'fuquay-varina-nc',
-    name: 'Fuquay-Varina, NC',
+    name: 'Fuquay-Varina',
     county: 'Wake County',
     zipCodes: ['27526'],
     distanceFromBase: '30 mins southwest',

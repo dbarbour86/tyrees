@@ -37,7 +37,7 @@ export default function ServiceAreaHubPage() {
               <div>
                 <div className="flex items-center justify-between mb-2">
                   <h2 className="text-xl font-bold uppercase text-foreground font-heading group-hover:text-primary transition-colors">
-                    {area.name}
+                    {area.name}, NC
                   </h2>
                   <span className="text-[11px] font-semibold text-muted-foreground bg-surface-elevated px-2 py-0.5 rounded border border-border">
                     {area.distance}

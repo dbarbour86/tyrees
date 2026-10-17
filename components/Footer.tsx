@@ -136,7 +136,7 @@ export default function Footer() {
                   href={`/service-area/${c.slug}`}
                   style={{ color: 'var(--muted-foreground)', textDecoration: 'none', transition: 'color 0.2s' }}
                 >
-                  ✓ {c.name}
+                  ✓ {c.name}, NC
                 </Link>
               ))}
             </div>
