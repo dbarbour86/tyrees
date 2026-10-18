@@ -42,7 +42,7 @@ export default function AppointmentModal() {
       return;
     }
 
-    const container = document.getElementById('crm-form-oHma');
+    const container = document.getElementById('crm-form-KnpJ');
     if (!container || formMountedRef.current) return;
 
     // If iframe is already mounted inside container, do not duplicate
@@ -56,7 +56,7 @@ export default function AppointmentModal() {
 
     // If CRMEmbed is already available on window, call createWidget
     if (window.CRMEmbed && typeof window.CRMEmbed.createWidget === 'function') {
-      window.CRMEmbed.createWidget('oHma', {
+      window.CRMEmbed.createWidget('KnpJ', {
         container: container,
         transparent: true,
         width: '100%',
@@ -69,7 +69,7 @@ export default function AppointmentModal() {
     // Otherwise, inject the official Votel embed script
     const script = document.createElement('script');
     script.src = 'https://app.votel.ai/form-embed/v1.js';
-    script.setAttribute('data-form-id', 'oHma');
+    script.setAttribute('data-form-id', 'KnpJ');
     script.setAttribute('data-transparent', '1');
     if (votelPublicKey) {
       script.setAttribute('data-public-key', votelPublicKey);
@@ -193,10 +193,10 @@ export default function AppointmentModal() {
 
         {/* Votel Form Container */}
         <div 
-          id="crm-form-oHma" 
+          id="crm-form-KnpJ" 
           style={{ 
             width: '100%', 
-            minHeight: '480px',
+            minHeight: '520px',
             position: 'relative'
           }} 
         />

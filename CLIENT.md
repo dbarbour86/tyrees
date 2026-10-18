@@ -152,8 +152,9 @@ Use Votel?
 
 Votel Form Details:
 - Script: `https://app.votel.ai/form-embed/v1.js`
-- Form ID: `oHma` (`data-form-id="oHma"`, `data-transparent="1"`)
-- Form Name: Tyree's Auto Detailing - Appointment Request
+- Form ID: `KnpJ` (`data-form-id="KnpJ"`, `data-transparent="1"`)
+- Form Name: Tyree's Auto Detailing - Package Booking Checkout
+- Form URL: `https://app.votel.ai/f/KnpJ`
 - Form Tenant: `mike-tyree-105e8138`
 - Trigger: All "Book Appointment" buttons open the modal with live Votel embed form.
 - Direct Fallback: Call or text (919) 320-3010
