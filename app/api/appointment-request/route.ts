@@ -6,15 +6,14 @@ import { AppointmentLeadPayload, AppointmentSubmissionResult } from '@/types/lea
  * 
  * Boundary Specifications:
  * 1. Validates required lead fields (Name, Phone, Service, Location).
- * 2. Checks server-side environment variable `VOTEL_WEBHOOK_URL` / `VOTEL_API_KEY`.
+ * 2. Checks server-side environment variable `VOTEL_API_KEY`.
  * 3. In PREVIEW MODE (when Votel credentials are not configured):
  *    - Explicitly returns `preview: true` and `success: false`.
  *    - Informs the client that the request is in local preview mode.
  *    - Returns the verified direct phone and SMS alternative `(919) 320-3010`.
- * 4. When VOTEL_WEBHOOK_URL is provisioned in the future:
- *    - Dispatches standard payload to Votel webhook.
- *    - Maps lead to corresponding CRM pipeline.
- *    - Never exposes API keys or webhook URLs to the client browser.
+ * 4. When VOTEL_API_KEY is provisioned:
+ *    - Dispatches standard payload to POST https://app.votel.ai/api/leads via X-API-Key.
+ *    - Never exposes secret API keys to the client browser.
  */
 
 export async function POST(req: NextRequest) {
@@ -57,11 +56,10 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const votelWebhookUrl = process.env.VOTEL_WEBHOOK_URL;
     const votelApiKey = process.env.VOTEL_API_KEY;
 
-    // Check if real Votel endpoint is configured
-    if (!votelWebhookUrl) {
+    // Check if real Votel secret API key is configured
+    if (!votelApiKey) {
       // HONEST UNCONFIGURED STATE — PREVIEW MODE ONLY
       // In accordance with Book Moar standards: never claim submission success without a real backend.
       return NextResponse.json<AppointmentSubmissionResult>({
@@ -72,12 +70,13 @@ export async function POST(req: NextRequest) {
       });
     }
 
-    // Live submission to Votel webhook (when provisioned)
-    const votelResponse = await fetch(votelWebhookUrl, {
+    // Live submission directly to Votel API (POST https://app.votel.ai/api/leads)
+    const votelApiEndpoint = 'https://app.votel.ai/api/leads';
+    const votelResponse = await fetch(votelApiEndpoint, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        ...(votelApiKey ? { 'Authorization': `Bearer ${votelApiKey}` } : {})
+        'X-API-Key': votelApiKey
       },
       body: JSON.stringify({
         ...body,

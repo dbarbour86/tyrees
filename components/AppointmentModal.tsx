@@ -51,12 +51,16 @@ export default function AppointmentModal() {
       return;
     }
 
+    // Read client-safe public key if provisioned
+    const votelPublicKey = process.env.NEXT_PUBLIC_VOTEL_PUBLIC_KEY;
+
     // If CRMEmbed is already available on window, call createWidget
     if (window.CRMEmbed && typeof window.CRMEmbed.createWidget === 'function') {
       window.CRMEmbed.createWidget('oHma', {
         container: container,
         transparent: true,
-        width: '100%'
+        width: '100%',
+        ...(votelPublicKey ? { publicKey: votelPublicKey, pk: votelPublicKey } : {})
       });
       formMountedRef.current = true;
       return;
@@ -67,6 +71,10 @@ export default function AppointmentModal() {
     script.src = 'https://app.votel.ai/form-embed/v1.js';
     script.setAttribute('data-form-id', 'oHma');
     script.setAttribute('data-transparent', '1');
+    if (votelPublicKey) {
+      script.setAttribute('data-public-key', votelPublicKey);
+      script.setAttribute('data-pk', votelPublicKey);
+    }
     script.async = true;
     script.onload = () => {
       formMountedRef.current = true;
